@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shoppingclient
-          image: k8stestforcarrie.azurecr.io/shoppingclient:v2
+          image: k8stestforcarrie.azurecr.io/shoppingclient
           imagePullPolicy: IfNotPresent          
           ports:
             - containerPort: 80
