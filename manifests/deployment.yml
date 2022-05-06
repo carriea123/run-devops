@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rundevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rundevops
+  template:
+    metadata:
+      labels:
+        app: rundevops 
+    spec:
+      containers:
+        - name: rundevops 
+          image: k8stestforcarrie.azurecr.io/rundevops
+          ports:
+          - containerPort: 80
