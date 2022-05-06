@@ -17,9 +17,9 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'e2bd5050-0b04-449c-8cd9-9367bbf7b47e'
+  dockerRegistryServiceConnection: '30d6869c-1c5f-43f6-88cd-f54b149861f8'
   imageRepository: 'shoppingapi'
-  containerRegistry: 'shoppingacr.azurecr.io'
+  containerRegistry: 'k8stestforcarrie..azurecr.io'
   dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'shoppingacr20662ab5-auth'
@@ -60,7 +60,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'aspnetrunrundevops.default'
+    environment: 'carriea123rundevops-1852.default'
     strategy:
       runOnce:
         deploy:
