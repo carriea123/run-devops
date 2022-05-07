@@ -22,7 +22,7 @@ variables:
   containerRegistry: 'k8stestforcarrie.azurecr.io'
   dockerfilePath: 'Shopping/Shopping.Client/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'shoppingacr20662ab5-auth'
+  imagePullSecret: 'k8stestforcarrie41364d6f-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
