@@ -70,14 +70,15 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
-              namespace: $(k8sNamespace)
               secretName: $(imagePullSecret)
+              namespace: $(k8sNamespace)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
               
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
+              namespace: $(k8sNamespace)
               manifests: |
                 $(Pipeline.Workspace)/aks/shoppingapi.yaml
               imagePullSecrets: |
