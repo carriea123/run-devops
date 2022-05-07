@@ -17,12 +17,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '30d6869c-1c5f-43f6-88cd-f54b149861f8'
+  dockerRegistryServiceConnection: 'a32a2356-379e-454b-8c60-bde884f60bd5'
   imageRepository: 'shoppingapi'
   containerRegistry: 'k8stestforcarrie..azurecr.io'
   dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'k8stestforcarrie41364d6f-auth'
+  imagePullSecret: 'k8stestforcarrie71416a35-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
