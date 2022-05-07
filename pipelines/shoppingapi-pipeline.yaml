@@ -23,6 +23,7 @@ variables:
   dockerfilePath: 'Shopping/Shopping.API/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'k8stestforcarrie71416a35-auth'
+  k8sNamespace: 'default'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -69,6 +70,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
+              namespace: $(k8sNamespace)
               secretName: $(imagePullSecret)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
               
