@@ -17,7 +17,7 @@ spec:
       containers:
         - name: shoppingapi
           image: k8stestforcarrie.azurecr.io/shoppingapi
-          imagePullPolicy: IfNotPresent          
+          imagePullPolicy: Always          
           ports:
             - containerPort: 80
           env:
